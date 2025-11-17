@@ -8,5 +8,10 @@ function formatValue(acceptedParameter: string | number | boolean) {
   }
 }
 
-
-
+function getLength(parameter: string | string[] | number[]) {
+  if (typeof parameter === "string") {
+    return parameter.length;
+  } else if (typeof parameter) {
+    return parameter.length;
+  }
+}
