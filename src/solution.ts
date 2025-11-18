@@ -41,8 +41,6 @@ function filterByRating(items: TItem[]): TItem[] {
   return result;
 }
 
-
-
 type TUsers = {
   id: number;
   name: string;
@@ -54,4 +52,20 @@ function filterActiveUsers(users: TUsers[]): TUsers[] {
   const result = users.filter((user) => user.isActive);
   return result;
 }
+
+interface Book {
+  title: string;
+  author: string;
+  publishedYear: number;
+  isAvailable: boolean;
+}
+
+function printBookDetails(book: Book): void {
+  const availability = book.isAvailable ? "Yes" : "No";
+
+  console.log(
+    `Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${availability}`
+  );
+}
+
 
