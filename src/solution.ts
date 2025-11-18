@@ -31,8 +31,6 @@ class Person {
   }
 }
 
-
-
 type TItem = {
   title: string;
   rating: number;
@@ -45,4 +43,15 @@ function filterByRating(items: TItem[]): TItem[] {
 
 
 
+type TUsers = {
+  id: number;
+  name: string;
+  email: string;
+  isActive: boolean;
+};
+
+function filterActiveUsers(users: TUsers[]): TUsers[] {
+  const result = users.filter((user) => user.isActive);
+  return result;
+}
 
